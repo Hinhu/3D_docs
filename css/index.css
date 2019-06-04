@@ -1,0 +1,36 @@
+body {
+    position: relative;
+    background-color: #d9d9d9;
+}
+
+ul.nav-pills {
+    top: 20px;
+    position: fixed;
+}
+
+#myScrollspy {
+    height: 100vh;
+}
+
+#sections-container {
+    background-color: #f2f2f2;
+}
+
+#sections-container img {
+    max-width:100%;
+}
+
+.section {
+    margin-top: 10px;
+    border-bottom: 2px solid grey;
+}
+
+.code {
+    display: inline-block;
+    background-color: #fcfcfc;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-family: 'Consolas';
+    padding: 5px;
+    margin-top:-15px;
+}
