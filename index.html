@@ -75,13 +75,13 @@
                     <p>
                         Kod podzieliłem na następujące moduły:
                         <ol>
-                            <li>Moduł główny</li>
-                            <li>Adders</li>
-                            <li>Creators</li>
-                            <li>Removers</li>
-                            <li>Configurators</li>
-                            <li>Others</li>
+                            <li><a href="#main">Moduł główny</a></li>
+                            <li><a href="#adders">Adders</a></li>
+                            <li><a href="#creators">Creators</a></li>
+                            <li><a href="#removers">Removers</a></li>
+                            <li><a href="#configurators">Configurators</a></li>
                         </ol>
+                        Wszystkie moduły poza modułem głównym składają się z plików exportujących pojedncze funkcje.
                     </p>
                 </div>
                 <div id="main" class="section">
@@ -90,23 +90,167 @@
                 </div>
                 <div id="adders" class="section">
                     <h1>Adders</h1>
-                    <p></p>
+                    <p>
+                        Moduł ten składa się z następujących funkcji w kolejności alfabetycznej:
+                        <ul class="fun-list">
+                            <li>
+                                <div class="code">
+                                    addRoiToScene(url, name, id, { spacing, roiActors, renderer, renderWindow })
+                                </div>
+                                <div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="code">
+                                    addVolumeToScene(actor, { renderer, renderWindow })
+                                </div>
+                                <div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </p>
                 </div>
                 <div id="creators" class="section">
                     <h1>Creators</h1>
-                    <p></p>
+                    <p>
+                        Moduł ten składa się z następujących funkcji w kolejności alfabetycznej:
+                        <ul class="fun-list">
+                            <li>
+                                <div class="code">
+                                    createInfoLabel()
+                                </div>
+                                <div>
+                                    Funkcja tworzy i zwraca etykietę, która jest używana do wyświetlania informacji dla
+                                    użytkownika, np. "Trwa pobieranie pliku pacjenta".
+                                </div>
+                            </li>
+                            <li>
+                                <div class="code">
+                                    createLabelContainer(changePreset)
+                                </div>
+                                <div>
+                                    Funkcja tworzy i zwraca etykietę, która służy do prezentacji aktualnego schematu
+                                    kolorów, w którym są wyświetlane dane wolumetryczne. W momencie kliknięcia w nią
+                                    zostaje uruchomiona funckją <span class="code">changePreset</span>, która służy do
+                                    zmiany aktualnego schematu.
+                                </div>
+                            </li>
+                            <li>
+                                <div class="code">
+                                    createPiecewiseGaussianWidget()
+                                </div>
+                                <div>
+                                    Funkcja tworzy i zwraca widget, który jest instancją
+                                    klasy <span class="code">vtkPiecewiseGaussianWidget</span>.
+                                </div>
+                            </li>
+                            <li>
+                                <div class="code">
+                                    createRoiActor(points, spacing, id)
+                                </div>
+                                <div>
+                                    Funkcja tworzy i zwraca instancję klasy <span class="code">vtkActor</span>, która
+                                    zawiera obiekt 3D będący zbiorem wokseli o współrzędnych <span
+                                        class="code">points</span> (tablica
+                                    tablic 3-elementowych) i rozmiarze <span class="code">spacing</span> (tablica
+                                    3-elementowa). Na podstawie liczby <span class="code">id</span> nadaje aktorowi
+                                    kolor
+                                    z tablicy kolorów zdefiniowanych w aplikacji.
+                                </div>
+                            </li>
+                            <li>
+                                <div class="code">
+                                    createRoiMapper(points, spacing)
+                                </div>
+                                <div>
+                                    Funkcja tworzy obiekt 3D będący zbiorem wokseli o współrzędnych <span
+                                        class="code">points</span> (tablica
+                                    tablic 3-elementowych) i rozmiarze <span class="code">spacing</span> (tablica
+                                    3-elementowa). Następnie tworzy i zwraca instację klasy <span
+                                        class="code">vtkMapper</span> zamierającą wcześniej stworzony model 3D.
+                                </div>
+                            </li>
+                            <li>
+                                <div class="code">
+                                    createSelectRoi(handleCheckbox)
+                                </div>
+                                <div>
+                                    Funkcja tworzy panel zawierający checkboxy sterujące wyświetlaniem roi'ów na
+                                    ekranie. Tworzy go na podstawie listy roi'ów opisanej w <a href="#data">Danych
+                                        wejściowych</a>. Każdemu z checkboxów przypisuje funkcję <span
+                                        class="code">handleCheckbox</span>, która steruje wyświetlaniem danego roi'a.
+                                </div>
+                            </li>
+                            <li>
+                                <div class="code">
+                                    createWidgetCointainer()
+                                </div>
+                                <div>
+                                    Funkcja tworzy i zwraca div'a będącego miejscem zagnieżdzenia widgeta tworzonego w
+                                    <span class="code">createPiecewiseGaussianWidget()</span>.
+                                </div>
+                            </li>
+                        </ul>
+                    </p>
                 </div>
                 <div id="removers" class="section">
                     <h1>Removers</h1>
-                    <p></p>
+                    <p>
+                        Moduł ten składa się z następujących funkcji w kolejności alfabetycznej:
+                        <ul class="fun-list">
+                            <li>
+                                <div class="code">
+                                    removeRoiFromScene(name, { renderer, renderWindow, roiActors })
+                                </div>
+                                <div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="code">
+                                    unmount3DView()
+                                </div>
+                                <div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </p>
                 </div>
                 <div id="configurators" class="section">
                     <h1>Configurators</h1>
-                    <p></p>
-                </div>
-                <div id="others" class="section">
-                    <h1>Others</h1>
-                    <p></p>
+                    <p>
+                        Moduł ten składa się z następujących funkcji w kolejności alfabetycznej:
+                        <ul class="fun-list">
+                            <li>
+                                <div class="code">
+                                    configureActor(actor, mapper, reader, lookupTable, piecewiseFunction)
+                                </div>
+                                <div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="code">
+                                    configureInteractionWithWidget(widget, widgetContainer, piecewiseFunction, {
+                                    renderWindow })
+                                </div>
+                                <div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="code">
+                                    configureInteractionWithWidget(widget,dataArray,piecewiseFunction,lookupTable,{renderWindow})
+                                </div>
+                                <div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </p>
                 </div>
             </div>
         </div>

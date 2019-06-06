@@ -31,6 +31,9 @@ ul.nav-pills {
     border: 1px solid #cccccc;
     border-radius: 5px;
     font-family: 'Consolas';
-    padding: 5px;
-    margin-top:-15px;
+    padding: 2px 5px 2px 5px;
+}
+
+.fun-list li {
+    margin-bottom: 15px;
 }
