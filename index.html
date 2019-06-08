@@ -16,7 +16,8 @@
     <div class="container-fluid">
         <div class="row">
             <nav class="col-sm-2 col-md-3" id="myScrollspy">
-                <ul class="nav nav-pills flex-column" id="nav-container"></ul>
+                <ul class="nav nav-pills flex-column" id="nav-container">
+                </ul>
             </nav>
             <div class="col-sm-10 col-md-9 col-lg-7" id="sections-container">
                 <div id="start" class="section">
@@ -80,6 +81,7 @@
                             <li><a href="#creators">Creators</a></li>
                             <li><a href="#removers">Removers</a></li>
                             <li><a href="#configurators">Configurators</a></li>
+                            <li><a href="#others">Others</a></li>
                         </ol>
                         Wszystkie moduły poza modułem głównym składają się z plików exportujących pojedncze funkcje.
                     </p>
@@ -98,7 +100,9 @@
                                     addRoiToScene(url, name, id, { spacing, roiActors, renderer, renderWindow })
                                 </div>
                                 <div>
-
+                                    Funkcja pobiera dane roi'a z adresu <span class="code">url</span>, tworzy jego
+                                    obiekt 3D, zapisuje go w słowniku <span class="code">roiActors</span>, dodaje go do
+                                    <span class="code">renderera</span> i odświaża ekran przeglądarki.
                                 </div>
                             </li>
                             <li>
@@ -106,7 +110,9 @@
                                     addVolumeToScene(actor, { renderer, renderWindow })
                                 </div>
                                 <div>
-
+                                    Funkcja dodaje obiekt <span class="code">actor</span>, zawierającego dane
+                                    wolumetryczne pacjenta do <span class="code">renderera</span> i odświaża ekran
+                                    przeglądarki.
                                 </div>
                             </li>
                         </ul>
@@ -205,7 +211,9 @@
                                     removeRoiFromScene(name, { renderer, renderWindow, roiActors })
                                 </div>
                                 <div>
-
+                                    Funkcja usuwa z <span class="code">renderera</span> obiekt roi'a przechowywanego w
+                                    słowniku <span class="code">roiActors</span> pod kluczem <span
+                                        class="code">name</span> oraz odświeża ekran przeglądarki.
                                 </div>
                             </li>
                             <li>
@@ -213,7 +221,8 @@
                                     unmount3DView()
                                 </div>
                                 <div>
-
+                                    Funkcja usuwa wszyskie elementy utworzone w czasie działania modułu z DOM'u
+                                    przeglądarki.
                                 </div>
                             </li>
                         </ul>
@@ -229,7 +238,7 @@
                                     configureActor(actor, mapper, reader, lookupTable, piecewiseFunction)
                                 </div>
                                 <div>
-
+                                    Funkcja konfiguruje <span class="code">actora</span>, wyciągając dane z <span class="code">readera</span>, który powinien posiadać pobrane dane z pliku vti, następnie umieszczając je w <span class="code">actorze</span>.
                                 </div>
                             </li>
                             <li>
@@ -238,15 +247,31 @@
                                     renderWindow })
                                 </div>
                                 <div>
-
+                                    Funkcja konfiguruje <span class="code">widget</span>, aby mogł on być interaktywny dla użytkownika.
                                 </div>
                             </li>
                             <li>
                                 <div class="code">
-                                    configureInteractionWithWidget(widget,dataArray,piecewiseFunction,lookupTable,{renderWindow})
+                                    configureWidget(widget, dataArray, piecewiseFunction, { lookupTable, renderWindow })
                                 </div>
                                 <div>
-
+                                    Funkcja konfiguruje <span class="code">widget</span>, aby mogł on wpływać na wyświetlane dane wolumetryczne.
+                                </div>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                <div id="others" class="section">
+                    <h1>Others</h1>
+                    <p>
+                        Moduł ten składa się z następujących funkcji w kolejności alfabetycznej:
+                        <ul class="fun-list">
+                            <li>
+                                <div class="code">
+                                    changePreset(delta = 1, { presetIndex, lookupTable, labelContainer, globalDataRange })
+                                </div>
+                                <div>
+                                    Funkcja służy do zmiany schematu kolorów, w których prezentowane są dane wolumetrzyczne. 
                                 </div>
                             </li>
                         </ul>
