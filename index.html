@@ -88,7 +88,13 @@
                 </div>
                 <div id="main" class="section">
                     <h1>Moduł główny</h1>
-                    <p></p>
+                    <p>
+                        Moduł głowny jest komponentem klasowym React'a. Nie jest on jednak montowany do wirtualnego
+                        DOM'u React'a tylko do DOM'u przeglądarki. W dalszym etapie projektu zajmę się rozwiązaniem tego
+                        problemu. Tymczasowo komponent ten nie dostaje żadnych props'ów, przez co wartości, które
+                        powinny być przez nie przekazywane (takie jak url'e do danych), są wpisane na stałe (hardcoded).
+                        Te niedopatrzenie również będzie naprawiane w przyszłości.
+                    </p>
                 </div>
                 <div id="adders" class="section">
                     <h1>Adders</h1>
@@ -238,7 +244,9 @@
                                     configureActor(actor, mapper, reader, lookupTable, piecewiseFunction)
                                 </div>
                                 <div>
-                                    Funkcja konfiguruje <span class="code">actora</span>, wyciągając dane z <span class="code">readera</span>, który powinien posiadać pobrane dane z pliku vti, następnie umieszczając je w <span class="code">actorze</span>.
+                                    Funkcja konfiguruje <span class="code">actora</span>, wyciągając dane z <span
+                                        class="code">readera</span>, który powinien posiadać pobrane dane z pliku vti,
+                                    następnie umieszczając je w <span class="code">actorze</span>.
                                 </div>
                             </li>
                             <li>
@@ -247,7 +255,8 @@
                                     renderWindow })
                                 </div>
                                 <div>
-                                    Funkcja konfiguruje <span class="code">widget</span>, aby mogł on być interaktywny dla użytkownika.
+                                    Funkcja konfiguruje <span class="code">widget</span>, aby mogł on być interaktywny
+                                    dla użytkownika.
                                 </div>
                             </li>
                             <li>
@@ -255,7 +264,8 @@
                                     configureWidget(widget, dataArray, piecewiseFunction, { lookupTable, renderWindow })
                                 </div>
                                 <div>
-                                    Funkcja konfiguruje <span class="code">widget</span>, aby mogł on wpływać na wyświetlane dane wolumetryczne.
+                                    Funkcja konfiguruje <span class="code">widget</span>, aby mogł on wpływać na
+                                    wyświetlane dane wolumetryczne.
                                 </div>
                             </li>
                         </ul>
@@ -268,10 +278,12 @@
                         <ul class="fun-list">
                             <li>
                                 <div class="code">
-                                    changePreset(delta = 1, { presetIndex, lookupTable, labelContainer, globalDataRange })
+                                    changePreset(delta = 1, { presetIndex, lookupTable, labelContainer, globalDataRange
+                                    })
                                 </div>
                                 <div>
-                                    Funkcja służy do zmiany schematu kolorów, w których prezentowane są dane wolumetrzyczne. 
+                                    Funkcja służy do zmiany schematu kolorów, w których prezentowane są dane
+                                    wolumetrzyczne.
                                 </div>
                             </li>
                         </ul>
